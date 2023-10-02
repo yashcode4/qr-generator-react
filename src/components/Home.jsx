@@ -4,10 +4,8 @@ import { Link } from 'react-router-dom'
 import { Preloading } from './Preloader';
 
 export const Home = () => {
-  // State for active/deactive the Pre-Loader.
   const [preloader, setPreloader] = useState(true)
 
-  // Pre-Loader will deactive/false after 2 seconds
   setInterval(() => {
     setPreloader(false)
   }, 2000);
@@ -15,7 +13,6 @@ export const Home = () => {
   return (
     <>
       <main>
-        {/* Show Loadiing when preLoader is true, otherwise renders the jsx */}
         {preloader ? ( <Preloading /> ) : 
         ( <>
           <div className="logoContainer">

@@ -1,18 +1,12 @@
 import React, { createContext, useContext, useState } from 'react';
 
-// Create context.
 const UrlContext = createContext();
 
-// Context Provider
 export const UrlProvider = ({ children }) => {
-    // Visibility of the Result Component. needed on generate component when generate, needed on result component when cancel.
   const [isVisible, setIsVisible] = useState(false);
 
-
-    // state of search url. Generator -> Context -> Results
     const [url, setUrl] = useState('');
 
-    // state of Image Url.
     const [imageUrl, setImageUrl] = useState('');
 
     const UpdateUrl = async (searchUrl) => {
@@ -29,5 +23,4 @@ export const UrlProvider = ({ children }) => {
 
 }
 
-// Export Context.
 export const useUrlContext = () => useContext(UrlContext);
