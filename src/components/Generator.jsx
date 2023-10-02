@@ -32,7 +32,7 @@ export const Generator = () => {
       setIsVisible(!isVisible);
       // If input has value, then remove 'shake-horizontal' class from the input tag.
       var element = document.getElementById('input');
-      element.classList.add('shake-horizontal');
+      element.classList.remove('shake-horizontal');
 
     }
   }

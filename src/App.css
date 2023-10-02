@@ -260,7 +260,7 @@ button:hover {
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  padding: 40px 0 40px 0;
+  padding: 45px 0 40px 0;
 
 }
 
@@ -268,6 +268,7 @@ button:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 220px;
 }
 
 .downloadBtnContainer {
@@ -281,6 +282,7 @@ button:hover {
 }
 
 .downloadHeading {
+  margin-top: 10px;
   color: #cfffad;
   font-size: 2rem;
   font-weight: 500;
@@ -324,7 +326,7 @@ button:hover {
 }
 
 .md-cancel-icon {
-  margin: 10px;
+  margin: 5px;
   width: 60px;
   height: 60px;
   color: white;
@@ -460,6 +462,12 @@ button:hover {
   .downloadBtnContainer {
     width: 80%;
   }
+
+  .Qr-container img {
+    width: 80%;
+    padding: 0;
+  }
+
 
   .buttonRow {
     flex-direction: column;
