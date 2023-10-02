@@ -1,38 +1,506 @@
-.App {
-  text-align: center;
+/* CSS for Home Component */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  font-family: Whitney, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  cursor: default;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  height: 100vh;
+  background-color: rgb(10, 10, 10);
+}
+
+main {
+  background-color: rgb(10, 10, 10);
+  height: 93vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* Home.jsx */
+/* landing page */
+.logoContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80%;
+}
+
+.logoContainer img {
+  width: 40%;
+}
+
+#qrlogo {
+  height: 250px;
+  width: 200px;
+}
+
+.buttonContainer {
+  height: fit-content;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+/* Let's Go Button */
+a {
+  text-decoration: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+button {
+  display: flex;
+  align-items: center;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 17px;
+  padding: 0.8em 1.3em 0.8em 0.9em;
+  color: black;
+  background: white;
+  border: none;
+  letter-spacing: 0.05em;
+  transition-duration: .5s;
+
+  cursor: pointer;
+}
+
+button svg {
+  margin-right: 3px;
+  transform: rotate(30deg);
+  transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+button span {
+  transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+button:hover svg {
+  transform: translateX(5px) rotate(90deg);
+}
+
+button:hover span {
+  transform: translateX(7px);
+}
+
+button:hover {
+  box-shadow: 0px 0px 10px #1bb6ec,
+    0px 0px 30px #1bb6ec;
+  color: #1bb6ec;
+  transition-duration: .5s;
+}
+
+/* Generator */
+.top-logo-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.top-logo-container img {
+  margin-top: 50px;
+  width: 15%;
+}
+
+.main-container {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 50px;
+  padding-top: 80px;
+  z-index: 1;
+}
+
+.input {
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  padding: 10px 25px;
+  background: transparent;
+  width: 300px;
+}
+
+.input:active {
+  box-shadow: 1px 1px 5px #c3efff inset;
+}
+
+
+/* input shake animation */
+.shake-horizontal {
+  -webkit-animation: shake-horizontal 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+  animation: shake-horizontal 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+  border: 2px solid #ff5d5d;
+}
+
+/* input animation keyframes */
+@-webkit-keyframes shake-horizontal {
+
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
   }
-  to {
-    transform: rotate(360deg);
+
+  10%,
+  30%,
+  50%,
+  70% {
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+
+  80% {
+    -webkit-transform: translateX(8px);
+    transform: translateX(8px);
+  }
+
+  90% {
+    -webkit-transform: translateX(-8px);
+    transform: translateX(-8px);
+  }
+}
+
+@keyframes shake-horizontal {
+
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70% {
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+
+  80% {
+    -webkit-transform: translateX(8px);
+    transform: translateX(8px);
+  }
+
+  90% {
+    -webkit-transform: translateX(-8px);
+    transform: translateX(-8px);
+  }
+}
+
+.submit {
+  padding: 10px 25px;
+  border: 2px solid #c9ffcc;
+  /* border-radius: 10px; */
+  background-color: white;
+  cursor: pointer;
+  color: black;
+  font-weight: 600;
+}
+
+.submit:hover {
+  border-radius: 5px;
+  background: #ffffff;
+  color: #1bb6ec;
+  border: 2px solid #1bb6ec;
+
+}
+
+/* Results */
+.Qr-container {
+  /* Positioning QR Container */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  z-index: 2;
+  width: 80%;
+  height: 80%;
+
+  background-color: rgba(44, 44, 44, 0.521);
+  backdrop-filter: blur(15px);
+
+  /* Positioning Qr Elements */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 40px 0 40px 0;
+
+}
+
+.imageContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.downloadBtnContainer {
+  width: 250px;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.downloadHeading {
+  color: #cfffad;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.buttonRow {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+
+.download {
+  font-family: Whitney, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  height: 35px;
+  font-weight: 400;
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  cursor: pointer;
+  font-size: 1.3rem;
+  padding: 0.8em 1.3em 0.8em 0.9em;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+}
+
+.download:hover {
+  background-color: #ffffff;
+  color: black;
+  box-shadow: 0px 0px 10px #1bb6ec,
+    0px 0px 10px #1bb6ec;
+  transition-duration: .4s;
+}
+
+.md-cancel-icon {
+  width: 60px;
+  height: 60px;
+  color: white;
+  transition: color 0.3s ease;
+  /* Add a 0.3-second transition effect for the color property */
+}
+
+.md-cancel-icon:hover {
+  color: rgb(255, 71, 71);
+}
+
+/* Loader */
+.LoaderCSS {
+  margin: 70px 0;
+}
+
+/* Footer */
+.footerContainer {
+  height: 7vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footerContainer p {
+  color: rgb(176, 176, 176);
+  font-size: 1.4rem;
+}
+
+.fa-copyright {
+  font-size: 1.3rem;
+  color: rgb(176, 176, 176);
+}
+
+/* Responsive Code Below */
+@media screen and (max-width:1920px) {
+  html {
+    font-size: 60%;
+  }
+}
+
+@media screen and (max-width:1200px) {
+  html {
+    font-size: 60%;
+  }
+}
+
+@media screen and (max-width:998px) {
+  html {
+    font-size: 55%;
+  }
+
+  .logoContainer img {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width:768px) {
+  html {
+    font-size: 50%;
+  }
+
+}
+
+@media screen and (max-width:500px) {
+  html {
+    font-size: 45%;
+  }
+
+  .logoContainer img {
+    width: 100%;
+  }
+
+}
+
+@media screen and (max-width:430px) {
+  html {
+    font-size: 43%;
+  }
+}
+
+@media screen and (max-width:375px) {
+  html {
+    font-size: 40%;
+  }
+}
+
+@media screen and (max-width:300px) {
+  html {
+    font-size: 40%;
+  }
+}
+
+@media screen and (max-width:1920px) {
+  html {
+    font-size: 60%;
+  }
+}
+
+@media screen and (max-width:1200px) {
+  html {
+    font-size: 60%;
+  }
+}
+
+@media screen and (max-width:998px) {
+  html {
+    font-size: 55%;
+  }
+
+  .top-logo-container img {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width:768px) {
+  html {
+    font-size: 50%;
+  }
+
+}
+
+@media screen and (max-width:500px) {
+  html {
+    font-size: 45%;
+  }
+
+  .top-logo-container img {
+    width: 60%;
+  }
+
+  .downloadBtnContainer {
+    width: 80%;
+  }
+
+  .buttonRow {
+    flex-direction: column;
+  }
+
+  .download {
+    width: 40%;
+
+  }
+
+}
+
+@media screen and (max-width:430px) {
+  html {
+    font-size: 43%;
+  }
+
+  .loader {
+    top: 130px;
+  }
+
+  .Qr-container img {
+    width: 80%;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width:375px) {
+  html {
+    font-size: 40%;
+  }
+
+  .main-container {
+    gap: 10px;
+  }
+
+  .input {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width:300px) {
+  html {
+    font-size: 40%;
   }
 }
