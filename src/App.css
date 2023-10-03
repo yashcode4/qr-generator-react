@@ -464,6 +464,10 @@ button:hover {
     width: 80%;
   }
 
+  .downloadBtnContainer h1{
+    margin-bottom: 10px;
+  }
+
   .Qr-container img {
     width: 80%;
     padding: 0;
@@ -474,7 +478,7 @@ button:hover {
   }
 
   .buttonRow {
-   margin: 10px 0;
+   margin: 20px 0;
   }
 
   .download {
