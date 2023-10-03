@@ -469,14 +469,17 @@ button:hover {
     padding: 0;
   }
 
+  .Qr-container {
+    background-color: rgba(44, 44, 44);
+  }
 
   .buttonRow {
-    flex-direction: column;
+   margin: 10px 0;
   }
 
   .download {
     width: 40%;
-
+    margin: 0 5px;
   }
 
 }
